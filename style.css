@@ -1,0 +1,191 @@
+* {
+    cursor: none;
+    font-family: monospace;
+}
+
+p {
+    font-size: 1vw;
+}
+
+h1 {
+    font-size: 4vw;
+    font-weight: 1;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right,#7BAFD4, lightgrey);
+}
+
+.timeline-div {
+    display: none;
+    flex-direction: column;
+    padding-left: 3vw;
+    padding-top: 3vh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.timeline-title-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline-content-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline-circle-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeline-circle {
+    height: 1vw;
+    width: 1vw;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.timeline-title {
+    padding-left: 2vw;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.timeline-line {
+    width: 1px;
+    background-color: black;
+    margin-left: 0.5vw;
+}
+
+.timeline-content {
+    margin-left: 4vw;
+    margin-right: 12vw;
+}
+
+.timeline-content.middle {
+    margin-bottom: 5vh;
+}
+
+.timeline-content.bottom {
+    margin-bottom: 1vh;
+}
+
+
+.header-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sub-header-div {
+    display: flex;
+    padding-left: 5vw;
+    margin-bottom: 4%;
+    font-size: large;
+
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5vw;
+}
+
+.letters-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.letter-div {
+    margin-bottom: 5vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.letter-button {
+    width: 5vw;
+    height: 5vw;
+    background-color: transparent;
+    font-size: 3vw;
+    font-weight: bolder;
+    color: white;
+    transition: width 0.5s;
+    border-radius: 1vw;
+    border: 2px solid black;
+}
+
+.letter-button.red {
+    background-color: rgb(255, 0, 0);
+}
+
+.letter-button.blue {
+    background-color: rgb(56, 137, 196);
+}
+
+.cursor {
+    /* brings cursor to front (highest z index) */
+    z-index: 100;
+    /* the specific pixel position will be respected regardless of anything else */
+    position: absolute;
+    /* starting position */
+    top: 0;
+    left: 0;
+    /* size */
+    height: 4vw;
+    width: 4vw;
+    /* curvature */
+    border-radius: 100%;
+    /* border */
+    border: 2px solid white;
+    /* centers circle onto cursor */
+    transform: translate(-50%, -50%);
+    /* starting opacity */
+    opacity: 0%;
+    /* unaffected by pointer events, since it is supposed to be the pointer */
+    pointer-events: none;
+    /* slight opaqueness */
+    background-color: rgb(227, 227, 227, 0.5);
+
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.logos-div {
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+}
+
+.logo {
+    height: 2vw;
+    width: 2vw;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
