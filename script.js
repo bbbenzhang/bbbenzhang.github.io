@@ -74,12 +74,10 @@ bButton.addEventListener("click", (e) => {
         bButton.style.background = "rgb(255, 0, 0, 0.5)";
         bTimeline.style.display = "flex";
         bTimeline.style.animation = "fadeIn 0.5s linear";
-        bTimeline.style.webkitAnimation = "fadeIn 0.5s linear";
     }
     else {
         bButton.style.background = "rgb(255, 0, 0, 1)";
         bTimeline.style.animation = "fadeOut 0.5s linear";
-        bTimeline.style.webkitAnimation = "fadeOut 0.5s linear";
         setTimeout(() => {bTimeline.style.display = "none";}, 475);
     }
 });
@@ -129,12 +127,10 @@ eButton.addEventListener("click", (e) => {
         eButton.style.background = "rgb(56, 137, 196, 0.5)";
         eTimeline.style.display = "flex";
         eTimeline.style.animation = "fadeIn 0.5s linear";
-        eTimeline.style.webkitAnimation = "fadeIn 0.5s linear";
     }
     else {
         eButton.style.background = "rgb(56, 137, 196, 1)";
         eTimeline.style.animation = "fadeOut 0.5s linear";
-        eTimeline.style.webkitAnimation = "fadeOut 0.5s linear";
         setTimeout(() => {eTimeline.style.display = "none";}, 475);
     }
 });
@@ -184,12 +180,10 @@ nButton.addEventListener("click", (e) => {
         nButton.style.background = "rgb(56, 137, 196, 0.5)";
         nTimeline.style.display = "flex";
         nTimeline.style.animation = "fadeIn 0.5s linear";
-        nTimeline.style.webkitAnimation = "fadeIn 0.5s linear";
     }
     else {
         nButton.style.background = "rgb(56, 137, 196, 1)";
         nTimeline.style.animation = "fadeOut 0.5s linear";
-        nTimeline.style.webkitAnimation = "fadeOut 0.5s linear";
         setTimeout(() => {nTimeline.style.display = "none";}, 475);
     }
 });
