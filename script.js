@@ -20,11 +20,11 @@ document.addEventListener("scroll", (e) => {
     cursor.style.top = scrollY + parseInt(cursor.getAttribute("data-fromTop")) + "px";
 });
 
-document.addEventListener("mouseenter", (e) => {
+document.addEventListener("mouseover", (e) => {
     cursor.style.opacity = "75%";
 });
 
-document.addEventListener("mouseleave", (e) => {
+document.addEventListener("mouseout", (e) => {
     cursor.style.opacity = "0%";
 });
 
