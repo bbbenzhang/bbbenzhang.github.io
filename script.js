@@ -5,20 +5,27 @@ const maxMovement = 50;
 const spacing = 30;
 
 // Create dots
-for (let i = 0; i < (window.innerWidth - spacing / 2) / spacing; i++) {
-    for (let j = 0; j < (window.innerHeight - spacing / 2) / spacing; j++)
-    {
-        const dot = document.createElement('div');
-        const x = spacing * i + spacing / 2;
-        const y = spacing * j + spacing / 2;
-        dot.setAttribute('originalX', `${x}`);
-        dot.setAttribute('originalY', `${y}`);
-        dot.classList.add('dot');
-        dot.style.left = `${x}px`;
-        dot.style.top = `${y}px`;
-        container.appendChild(dot);
+function createDots() {
+    for (let i = 0; i < (window.innerWidth - spacing / 2) / spacing; i++) {
+        for (let j = 0; j < (window.innerHeight - spacing / 2) / spacing; j++)
+        {
+            const dot = document.createElement('div');
+            const x = spacing * i + spacing / 2;
+            const y = spacing * j + spacing / 2;
+            dot.setAttribute('originalX', `${x}`);
+            dot.setAttribute('originalY', `${y}`);
+            dot.classList.add('dot');
+            dot.style.left = `${x}px`;
+            dot.style.top = `${y}px`;
+            container.appendChild(dot);
+        }
     }
 }
+
+function destroyDots() {
+    container.innerHTML = '';
+}
+
 
 // Function to calculate distance between two points
 function getDistance(x1, y1, x2, y2) {
@@ -63,5 +70,31 @@ function handleMouseLeave(event) {
     });
 }
 
+const projects = document.getElementById('projects');
+for (let i = 1; i < projects.children.length; i++) {
+    const project = projects.children.item(i);
+    project.addEventListener('mouseenter', (event) => {
+        project.children.item(0).classList.add('thumbnail-hover');
+    })
+    project.addEventListener('mouseleave', (event) => {
+        project.children.item(0).classList.remove('thumbnail-hover');
+    })
+}
+
+
+createDots();
 document.addEventListener('mousemove', handleMouseMove);
 document.addEventListener('mouseleave', handleMouseLeave);
+
+window.addEventListener('resize', () => {
+    destroyDots();
+    createDots();
+});
+
+function party() {
+    document.querySelectorAll('.dot').forEach(dot => {  
+        dot.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+    });
+}
+
+//setInterval(party, 100);

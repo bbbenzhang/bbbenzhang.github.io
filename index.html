@@ -5,19 +5,87 @@
     <title> <ben/> </title>
     <link rel="stylesheet" href="style.css" />
 	<link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 </head>
+
 <body>
-	<div class="header">
-		<h1>Hi, I'm Ben</h1>
-		<h2>Aspiring software developer who builds things. </h2>
-		<img class="thumb-tack" src="thumb_tack.png">
-		<img class="picture" src="picture.jpg">
-	</div>
+    <img class="disco-ball" src="disco-ball.png">
+
     <div class="dot-container">
         <!-- Dots will be dynamically added here by JavaScript -->
     </div>
-    <script src="script.js"></script>
+
+    <div class="content-container">
+        <div class="header content">
+            <h1>Hi, I'm Ben</h1>
+            <h2>Aspiring software developer who builds things. </h2>
+            <img class="thumb-tack" src="thumb_tack.png">
+            <img class="picture" src="picture.jpg">
+            <a class="section" href="#projects">- Projects -</a>
+            <a class="section">- Experience -</a>
+            <a class="section">- About -</a>
+        </div>
+        <div id="projects" class="projects content">
+            <h2> Projects </h2>
+            <div class="project">
+                <img class="thumbnail" src="password-manager.png">
+                <div class="description-container">
+                    <h3 class="title"> < Password Manager > </h3>
+                    <p class="description"> Desktop password manager with Python using PyQt5. 
+                        User passwords are encrypted with a master password. 
+                        Features the ability to import/export from CSV, automatic logout after inactivity, and search by service associated with password.
+                    </p>
+                    <div class="skills-container">
+                        <p class="skill"> Python </p>
+                        <p class="skill"> PyQt </p>
+                    </div>
+                    <a href="https://github.com/bbbenzhang/BRU" target="_blank">
+                        <img class="project-github" src="github-mark.png">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img class="thumbnail" src="seating-chart.png">
+                <div class="description-container">
+                    <h3 class="title"> < Interactive Seating Chart > </h3>
+                    <p class="description"> Worked in a team of four in UNC's Computer Science Experience Lab (CSXL) website codebase to create an interactive seating chart,
+                        and applied the newly created widget to revamp the seat reservation interface to be more user friendly for students and administrators alike.
+                    </p>
+                    <div class="skills-container">
+                        <p class="skill"> Angular </p>
+                        <p class="skill"> Typescript </p>
+                        <p class="skill"> FastAPI </p>
+                        <p class="skill"> SQLAlchemy </p>
+                        <p class="skill"> HTML/CSS </p>
+                    </div>
+                    <!--
+                    <a>
+                        <img class="project-github" src="github-mark.png">
+                    </a>
+                    -->
+                </div>
+            </div>
+            <div class="project">
+                <img class="thumbnail" src="card-shuffle.png">
+                <div class="description-container">
+                    <h3 class="title"> < Card Shuffle > </h3>
+                    <p class="description"> An art project reflecting on the idea of a "long period of time". A standard 52-card deck is shuffled once a second until it 
+                        reaches its original configuration.
+                    </p>
+                    <div class="skills-container">
+                        <p class="skill"> HTML/CSS </p>
+                        <p class="skill"> Javascript </p>
+                    </div>
+                    <a href="https://github.com/bbbenzhang/CardShuffle" target="_blank">
+                        <img class="project-github" src="github-mark.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 	
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
