@@ -205,6 +205,45 @@ p {
     z-index: 3;
 }
 
+.disco-ball:hover {
+    animation-name: hue-rotate, sway;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+    cursor: pointer;
+}
+
+.party {
+    animation-name: hue-rotate, sway;
+    animation-duration: 2s, 2s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes hue-rotate {
+    from {
+      filter: sepia(1) saturate(5) hue-rotate(0deg);
+    }
+    to {
+      filter: sepia(1) saturate(5) hue-rotate(360deg);
+    }
+  }
+
 
 /* width */
 ::-webkit-scrollbar {

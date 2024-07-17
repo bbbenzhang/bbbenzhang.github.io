@@ -91,10 +91,30 @@ window.addEventListener('resize', () => {
     createDots();
 });
 
+let partying = false;
+let interval;
+const discoBall = document.getElementById("disco-ball");
+
 function party() {
-    document.querySelectorAll('.dot').forEach(dot => {  
-        dot.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
-    });
+    if (partying) {
+        discoBall.classList.remove("party");
+        clearInterval(interval);
+        destroyDots();
+        createDots();
+        container.style.backgroundColor = "white";
+        partying = false;
+    } 
+    else {
+        discoBall.classList.add("party");
+        interval = setInterval(() => {
+            document.querySelectorAll('.dot').forEach(dot => {  
+                dot.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+            });
+        }, 100);
+        container.style.backgroundColor = "black";
+        partying = true; 
+    }
 }
+    
 
 //setInterval(party, 100);
