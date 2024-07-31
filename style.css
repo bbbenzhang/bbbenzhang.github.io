@@ -148,7 +148,7 @@ p {
 }
 
 .thumbnail-hover {
-    transform: translate(-300px, 0px);
+    transform: translate(-400px, 0px);
 }
 
 .description-container {
@@ -157,19 +157,20 @@ p {
     top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     z-index: 2;
-    width: 250px;
+    width: 325px;
 }
 
+
 .description {
-    text-align: center;
+    text-align: left;
 }
 
 .skills-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
 }
 
@@ -180,17 +181,16 @@ p {
     border: solid 2px black;
     padding-left: 5px;
     padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .project-github {
-    width: 25px;
+    width: 30px;
     height: auto;
     transition: filter 1s;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .project-github:hover {
