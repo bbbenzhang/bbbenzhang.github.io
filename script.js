@@ -2,7 +2,7 @@ const container = document.querySelector('.dot-container');
 const dotSize = 3;
 const repulsionRadius = 200;
 const maxMovement = 50;
-const spacing = 30;
+const spacing = 40;
 
 // Create dots
 function createDots() {
@@ -87,9 +87,11 @@ document.addEventListener('mousemove', handleMouseMove);
 document.addEventListener('mouseleave', handleMouseLeave);
 
 window.addEventListener('resize', () => {
+    console.log('resized');
     destroyDots();
     createDots();
 });
+
 
 let partying = false;
 let interval;
@@ -99,8 +101,9 @@ function party() {
     if (partying) {
         discoBall.classList.remove("party");
         clearInterval(interval);
-        destroyDots();
-        createDots();
+        document.querySelectorAll('.dot').forEach(dot => {  
+            dot.style.backgroundColor = "black";
+        });
         container.style.backgroundColor = "white";
         partying = false;
     } 
