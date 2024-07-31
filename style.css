@@ -197,6 +197,37 @@ p {
     filter: brightness(3);  
 }
 
+.navigation-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    right: 25vw;
+}
+
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 1s;
+}
+
+.navigation-section {
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navigation-section:hover {
+    color: yellow;
+}
+
 .disco-ball {
     scale: 25%;
     position: fixed;

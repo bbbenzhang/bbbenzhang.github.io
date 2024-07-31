@@ -118,6 +118,26 @@ function party() {
         partying = true; 
     }
 }
-    
+
+
+const navigation = document.getElementById("navigation");
+const projectsNavigation = document.getElementById("projects-navigation");
+const header = document.getElementById("header");
+
+const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) navigation.style.opacity = 0;
+        else navigation.style.opacity = 100;
+    });
+});
+headerObserver.observe(header);
+
+const projectsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) projectsNavigation.innerHTML = "-projects";
+        else projectsNavigation.innerHTML = "projects";
+    });
+});
+projectsObserver.observe(projects);
 
 //setInterval(party, 100);
