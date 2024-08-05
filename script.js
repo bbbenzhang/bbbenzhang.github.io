@@ -122,7 +122,9 @@ function party() {
 
 const navigation = document.getElementById("navigation");
 const projectsNavigation = document.getElementById("projects-navigation");
+const experienceNavigation = document.getElementById("experience-navigation");
 const header = document.getElementById("header");
+const experience = document.getElementById("experience");
 
 const headerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -134,10 +136,18 @@ headerObserver.observe(header);
 
 const projectsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) projectsNavigation.innerHTML = "-projects";
-        else projectsNavigation.innerHTML = "projects";
+        if (entry.isIntersecting) projectsNavigation.style.fontWeight = "bold";
+        else projectsNavigation.style.fontWeight = "normal";
     });
 });
 projectsObserver.observe(projects);
+
+const experienceObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) experienceNavigation.style.fontWeight = "bold";
+        else experienceNavigation.style.fontWeight = "normal";
+    });
+});
+experienceObserver.observe(experience);
 
 //setInterval(party, 100);
