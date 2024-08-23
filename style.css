@@ -37,25 +37,6 @@ p {
     transition: all ease-out 1s;
 }
 
-.thumb-tack {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    top: 0px;
-    left: 5px;
-    z-index: 3;
-}
-
-.picture {
-    width: auto;
-    height: 20vh;
-    position: absolute;
-    left: 25px;
-    top: 10px;
-    transform: rotate(-5deg);
-    border-radius: 10px;
-}
-
 .dot-container {
     /*background-color: #eee7d7;*/
     background-color: white;
@@ -206,6 +187,44 @@ p {
     height: 1000px;
     background-color: rgb(255, 223, 164);
     border-radius: 15px 75px 75px;
+}
+
+.about {
+    width: 750px;
+    height: fit-content;
+    background-color: rgb(175,209,226);
+    border-radius: 15px 75px 75px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-description {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.about-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-bold {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 50px;
 }
 
 .navigation-container {

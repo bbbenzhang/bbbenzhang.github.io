@@ -123,8 +123,10 @@ function party() {
 const navigation = document.getElementById("navigation");
 const projectsNavigation = document.getElementById("projects-navigation");
 const experienceNavigation = document.getElementById("experience-navigation");
+const aboutNavigation = document.getElementById("about-navigation");
 const header = document.getElementById("header");
 const experience = document.getElementById("experience");
+const about = document.getElementById("about");
 
 const headerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -149,5 +151,13 @@ const experienceObserver = new IntersectionObserver((entries) => {
     });
 });
 experienceObserver.observe(experience);
+
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) aboutNavigation.style.fontWeight = "bold";
+        else aboutNavigation.style.fontWeight = "normal";
+    });
+});
+aboutObserver.observe(about);
 
 //setInterval(party, 100);
