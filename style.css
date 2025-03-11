@@ -29,12 +29,11 @@ p {
     font-size: large;
     text-decoration: none;
     color: black;
-    font-weight: bold;
 }
 
 .section:hover {
     box-shadow: inset 150px 0 0 0 yellow;
-    transition: all ease-out 1s;
+    transition: box-shadow ease-out 1s;
 }
 
 .dot-container {
@@ -187,7 +186,10 @@ p {
     height: 1000px;
     background-color: rgb(255, 223, 164);
     border-radius: 15px 75px 75px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
+
 
 .about {
     width: 750px;
